@@ -1,0 +1,28 @@
+{
+  "name": "Integração NS - KAJABI",
+  "description": "Integração de pedidos entre Nuvem Shop e Kajabi",
+  "version": "0.1",
+  "manifest_version": 2,
+  "author": "Leonam Bernini - leonamb19@gmail.com",
+  "browser_action": {
+    "default_title": "NS <> KAJABI",
+    "default_popup": "popup.html",
+    "default_icon": "128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/jquery-3.6.0.min.js",
+        "js/index.js"
+      ],
+      "matches": [
+        "*://*.lojavirtualnuvem.com.br/admin/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["img/*", "sounds/*"],
+  "icons": {
+    "16": "16.png",
+    "128": "128.png"
+  }
+}
